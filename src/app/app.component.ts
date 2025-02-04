@@ -37,13 +37,13 @@ export class AppComponent {
     this.tarea.setValue('');
   }
 
-  borraTarea(posicion:number){
+  borrarTarea(posicion:number) {
     this.listaTareas.splice(posicion,1);
     localStorage.clear();
     localStorage.setItem('tareas', JSON.stringify(this.listaTareas));
   }
 
-  borrarTareas(){
+  borrarTareas() {
     localStorage.clear();
     this.listaTareas = [];
   }
